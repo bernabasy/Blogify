@@ -136,7 +136,7 @@ If you like this project, please consider giving it a ⭐.
 
 ## 🙏 Acknowledgements
 
-I would like to thank all code reviewers for making this project better.
+I would like to thank all micronant and code reviewers for making this project better.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
