@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe '/Users', type: :request do
+  let(:seeded_user) { User.first } # pick the first user from seed file
   describe 'Get/index' do
     before(:example) do
       get '/users'
@@ -18,7 +19,7 @@ RSpec.describe '/Users', type: :request do
 
   describe 'Get/show' do
     before(:example) do
-      get '/users/1'
+      get "/users/#{seeded_user.id}" # use seeded user's id for show action
     end
     it 'renders a successful response' do
       expect(response).to be_successful
