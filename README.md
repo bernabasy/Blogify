@@ -44,7 +44,6 @@
 
 ## 🚀 Live Demo  <a name="live-demo"></a>
 
-You can visit the [live demo website here](https://github.com/bernabasy/Blogify).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
