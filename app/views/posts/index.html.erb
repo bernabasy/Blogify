@@ -1,1 +1,43 @@
-<h1>Here is the list of all posts for user A </h1>
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div class='container'>
+      <div class='card'>
+        <img class='user_pic' src= <%= @user.photo %> >
+        <div class='left_card'>
+          <h2 class='username'><%= @user.name %></h2>
+          <p class='count'>Number of posts: <%= @user.posts_counter >= 0 ? @user.posts_counter : '0' %></p><br>
+        </div>
+      </div>
+      <div class='bio_div'>
+        <p>Bio</p>
+        <p><%= @user.bio %></p>
+      </div>
+
+        <% @posts.each do |post| %>
+          <a href=<%= user_post_url(@user.id, post.id) %> class='sub_container'>
+            <div class='postcard'>
+              <p><%= post.title %></p>
+              <p><%= post.text.truncate(50, separator:' ') %></p>
+              <p class='count'>
+                Comments: <%= post.comments_counter != nil ? post.comments_counter : '0' %>
+                Likes: <%= post.likes_counter != nil ? post.likes_counter : '0' %>
+              </p>
+            </div>
+            <% @comments = post.recent_comments %>
+            <% if @comments.length > 0 %>
+              <div class='comments_card'>
+                <% @comments.each do |comment| %>
+                  <% user = User.find(comment.author_id)%>
+                  <p class='comment'><%= user.name %>: <%= comment.text %></p>
+                <% end %>
+              </div>
+            <% end %>
+          </a>
+        <% end %>
+
+      <a class='button'>Pagination(Not Working)</a>
+    </div>
+  </body>
+</html>

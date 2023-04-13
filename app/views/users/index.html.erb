@@ -1,1 +1,17 @@
-<h1>Here is a list of all users</h1>
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div class='container'>
+      <% @users.each do |user| %>
+        <div class='card'>
+          <img class='user_pic' src= <%= user.photo %> >
+          <a href="/users/<%= user.id %>" class='left_card'>
+            <h2 class='username'><%= user.name %></h2>
+            <p class='count'>Number of posts: <%= user.posts_counter >= 0 ? user.posts_counter : '0' %></p><br>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </body>
+</html>
