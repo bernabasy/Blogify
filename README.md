@@ -63,7 +63,7 @@ Make sure you have the following installed on your machine:
 Clone this repository to your desired folder.
 
 ```sh
-git clone https://github.com/bernabasy/Blogify.git .
+git clone https://github.com/bernabasy/Blogify.git
 cd Blogify
 ```
 
