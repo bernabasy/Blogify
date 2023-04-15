@@ -31,12 +31,12 @@ a {
   margin-right: 100px;
 }
 
-.user_pic {
+.userpic {
   width: 110px;
   height: 110px;
 }
 
-.left_card {
+.leftcard {
   border: 2px solid black;
   width: 50%;
   display: flex;
@@ -53,13 +53,13 @@ a {
   padding: 0.5rem;
 }
 
-.bio_div {
+.biodiv {
   border: 2px solid black;
   width: 80%;
   padding: 0.5rem;
 }
 
-.bio_div > * {
+.biodiv > * {
   margin-bottom: 0.5rem;
 }
 
@@ -75,7 +75,7 @@ a {
   margin-bottom: 0.5rem;
 }
 
-.comments_card {
+.commentscard {
   border: 2px solid black;
   width: 80%;
   display: flex;
@@ -83,14 +83,14 @@ a {
   padding: 0.5rem;
 }
 
-.sub_container {
+.subcontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
-.sub_container > :not(:last-child) {
+.subcontainer > :not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
@@ -100,6 +100,6 @@ a {
   box-shadow: 2px 2px;
 }
 
-.container.post_screen > * {
+.container.postscreen > * {
   margin-bottom: 2px;
 }
