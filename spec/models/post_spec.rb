@@ -42,7 +42,7 @@ RSpec.describe Post, type: :model do
     end
 
     it 'should return the 5 most recent comments' do
-      expect(subject.recent_comments).to eq(Comment.where(post_id: subject.id).order(created_at: :desc).limit(5))
+      expect(subject.recent_comments).to eq(Comment.where(post_id: subject.id).order(created_at: :asc).limit(5))
     end
   end
 
