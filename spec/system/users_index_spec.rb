@@ -1,31 +1,53 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :system do
-  describe 'User index page' do
-    before(:each) do
-      @user = User.create(name: 'John Doe',
-                          photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                          bio: 'I am a Full Stack Developer',
-                          posts_counter: 4)
+RSpec.describe 'User index', type: :feature do
+  before(:each) do
+    @user1 = User.create(
+      name: 'berna',
+      bio: 'Aspiring FullStack Dev',
+      photo: 'https://unsplash.com/photos/NDCy2-9JhUs',
+      posts_counter: 2
+    )
 
+    @user2 = User.create(
+      name: 'nati',
+      bio: 'FullStack Dev',
+      photo: 'https://unsplash.com/photos/hodKTZow_Kk',
+      posts_counter: 3
+    )
+  end
+
+  describe 'user index paged' do
+    it 'displays correct username' do
       visit users_path
+      expect(page).to have_content('berna')
+      expect(page).to have_content('nati')
+      expect(page).to_not have_content('Caicedo')
     end
 
-    it 'displays the user name of all other users' do
-      expect(page).to have_content(@user.name)
+    it 'shows user profile photo' do
+      visit users_path
+      expect(page).to have_css("img[src*='https://unsplash.com/photos/NDCy2-9JhUs']")
+      expect(page).to have_css("img[src*='https://unsplash.com/photos/hodKTZow_Kk']")
     end
 
-    it 'displays the user photo of all other users' do
-      expect(page.body).to include(@user.photo)
+    it 'shows the correct number of posts' do
+      visit users_path
+
+      expect(page).to have_content('Number of posts: 2')
+      expect(page).to have_content('Number of posts: 3')
     end
 
-    it 'displays the number of posts each user has written' do
-      expect(page).to have_content(@user.posts_counter)
+    it 'shows the user_path when clicked' do
+      visit users_path
+      click_link 'berna'
+      expect(page).to have_current_path(user_path(@user1))
     end
 
-    it "When I click on a user, I am redirected to that user's show page" do
-      click_link(@user.name)
-      expect(page).to have_current_path(user_path(@user))
+    it 'it shows the bio in show path' do
+      visit users_path
+      click_link 'nati'
+      expect(page).to have_content('FullStack Dev')
     end
   end
 end
