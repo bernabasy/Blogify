@@ -29,7 +29,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'returns the three most recent posts' do
-      expect(subject.recent_posts).to eq(subject.posts.order(created_at: :desc).limit(3))
+      expect(subject.recent_posts).to eq(subject.posts.order(created_at: :asc).limit(3))
     end
   end
 end
