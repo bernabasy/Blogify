@@ -24,7 +24,7 @@
 
 # 📰 Blogify - Rails App <a name="about-project"></a>
 
-**Blogify** is a simple, easy-to-use blogging platform which allows users to create and publish their own blog posts. Users can also read posts from other users and give likes/comments.
+In this project, I added the devise gem to the app and used it for the registration and login of users.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -37,8 +37,9 @@
 
 ## ✨ Key Features <a name="key-features"></a>
 
-- Solved N+1 problems when fetching all posts and their comments for a user, using includes.
-- Used Capybara to write integration tests for each view in the project.
+- Removed current_user method in ApplicationController, devise provided it.
+- Installed and setup devise.
+- Modified the views in devise for registration and login to match the wireframes from the Sneak Peek and my styling.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
