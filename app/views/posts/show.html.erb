@@ -35,6 +35,10 @@
             <% end %>
             <%= form.submit "Submit", class: "btn btn-primary" %>
         <% end %>
+        <% if can? :destroy, @post %>
+        <%= button_to 'Delete', "/users/#{@post.author_id}/posts/#{@post.id}", :method => :delete, class: "button1" %>
+      <% end %>
+      </a>
         <h5>Recent Comments</h5>
         <% @post.comments.order(created_at: :desc).each do |comment| %>
             <%= render partial: "/shared/comment", locals: { comment: comment } %>
