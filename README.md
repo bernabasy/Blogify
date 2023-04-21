@@ -24,7 +24,7 @@
 
 # 📰 Blogify - Rails App <a name="about-project"></a>
 
-In this project, I added the devise gem to the app and used it for the registration and login of users.
+In this project, we added authorization to our app using CanCanCan.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -37,9 +37,10 @@ In this project, I added the devise gem to the app and used it for the registrat
 
 ## ✨ Key Features <a name="key-features"></a>
 
-- Removed current_user method in ApplicationController, devise provided it.
-- Installed and setup devise.
-- Modified the views in devise for registration and login to match the wireframes from the Sneak Peek and my styling.
+- Install CanCanCan in your project.
+- Add a role column to the users table.
+- A user can delete a post if it is theirs or if they have an admin role.
+- A user can delete a comment if it is theirs or if they have an admin role.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,7 +119,6 @@ rspec spec
 ## 🎯 Future Features <a name="future-features"></a>
 
 - [ ] Create API endpoints
-- [ ] Implement authentication
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
