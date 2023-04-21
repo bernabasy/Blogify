@@ -240,3 +240,16 @@ textarea {
 .like-form input {
   padding: 0.5em 5em;
 }
+
+.auto-width {
+  width: auto;
+}
+
+.flex-end {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.button1 {
+  margin-left: 90%;
+}
