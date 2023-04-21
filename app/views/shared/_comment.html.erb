@@ -1,4 +1,13 @@
 <div class="comment">
     <p><%= comment.author.name %>:</p>
     <p><%= comment.text %></p>
+    <div class="flex-center">
+  <% if can? :destroy , comment %>
+    <%= form_with model: comment, method: :delete, local: true, 
+    url: "/users/#{@post.author.id}/posts/#{@post.id}/comments/#{comment.id}/",
+      html: {class: "row flex-end"} do |f| %>
+      <%= f.submit "Delete Comment", class: "auto-width" %>
+    <% end %>
+  <% end %>
+</div>
 </div>
