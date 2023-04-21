@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
       end
     end
   end
-  
+
   def destroy
     comment = Comment.find(params[:id])
     respond_to do |format|

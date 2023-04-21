@@ -19,6 +19,7 @@ class Post < ApplicationRecord
   def update_counter
     author.increment!(:posts_counter)
   end
+
   def decrease_counter
     author.decrement!(:posts_counter)
   end
