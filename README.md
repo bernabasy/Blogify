@@ -37,10 +37,8 @@ The Blog-dev is a fully functional website that allows users to view a list of p
 
 ## ✨ Key Features <a name="key-features"></a>
 
-- Install CanCanCan in your project.
-- Add a role column to the users table.
-- A user can delete a post if it is theirs or if they have an admin role.
-- A user can delete a comment if it is theirs or if they have an admin role.
+- Use database migrations
+- Blog webapp
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
