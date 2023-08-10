@@ -25,7 +25,7 @@
 # 📰 Blogify - Rails App <a name="about-project"></a>
 
 
-The Blog-dev is a fully functional website that allows users to view a list of posts, add comments, and like posts. The project includes data model creation, model validations and specs, processing data in models, setting up controllers, creating controller specs, building views and forms, fixing n+1 problems, adding Devise for authentication, adding authorization rules, and implementing API endpoints. The final exercise involves creating API documentation.
+The Blog-dev is a fully functional website that allows users to view a list of posts, add comments, and like posts. The project includes data model creation, model validations, and specs, processing data in models, setting up controllers, creating controller specs, building views and forms, fixing n+1 problems, adding Devise for authentication, adding authorization rules, and implementing API endpoints. The final exercise involves creating API documentation.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🧰 Tech Stack <a name="tech-stack"></a>
